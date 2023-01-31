@@ -1,25 +1,22 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./styles.css";
 
-import Home from "./views/Home";
-import Contact from "./views/Contact";
-import NotFound from "./views/NotFound";
+import { BrowserRouter, Routes, Route  } from "react-router-dom";
 import Navbar from "./components/Navbar";
-
-function App() {
-  return (
+import Home from "./view/Home";
+import Pokemones from "./view/Pokemones";
+ 
+export default function App() {
+    return (
     <div className="App">
       <BrowserRouter>
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
+           <Route  path="/"  element={<Home />}  />
+           <Route path="/pokemones" element={<Pokemones />} />
+     
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
-
-export default App;

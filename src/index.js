@@ -5,9 +5,14 @@ import App from "./App";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
-
+import PokemonesProvider from  "./context/PokemonesContext"
+ 
 root.render(
   <StrictMode>
-    <App />
+    <PokemonesProvider>
+   
+       <App />
+     
+    </PokemonesProvider>
   </StrictMode>
 );
